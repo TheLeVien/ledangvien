@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign in and Sign up</title>
+  </head>
+  <body style="background-color: #8c1010">
+    <div
+      id="logo"
+      style="
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 11%;
+      "
+    >
+      <img src="logo-no-background(1).png" alt="" />
+    </div>
+    <div id="d">
+      <div class="tt">
+        <form name="register">
+          <fieldset>
+            <legend>Sign Up Form</legend>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              placeholder="Please fill this blank with your name!!!"
+              name="name"
+              id="name"
+              class="textt"
+            />
+            <br />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              placeholder="Please fill this blank with your email!!!"
+              name="email"
+              id="email"
+              class="textt"
+            />
+            <br />
+            <label for="pass">Password:</label>
+            <input
+              type="password"
+              placeholder="Please enter your password!!!"
+              name="pass"
+              id="pass"
+              class="textt"
+            />
+            <br />
+            <label for="re-pass">Re Password:</label>
+            <input
+              type="password"
+              placeholder="Please re-enter your password!!!"
+              name="repass"
+              id="repass"
+              class="textt"
+            />
+            <button onclick="checkdangki()">Sign Up</button>
+            <label for="" id="ll">(*)Already had acount???</label>
+          </fieldset>
+        </form>
+      </div>
+
+      <hr style="margin: 5%; height: auto; margin-top: 2%; margin-bottom: 2%" />
+
+      <div class="tt">
+        <form name="login">
+          <fieldset>
+            <legend>Sign In Form</legend>
+            <label for="">Email:</label>
+            <input
+              type="email"
+              placeholder="Please fill this blank with your email!!!"
+              name="email"
+              id="email"
+              class="textt"
+            />
+            <br />
+            <label for="">Password:</label>
+            <input
+              type="password"
+              placeholder="Please fill this blank with your password!!!"
+              name="pass"
+              id="pass"
+              class="textt"
+            />
+            <button onclick="checkdangnhap()">Sign In</button>
+            <label for="" id="ll">(*)Haven't had account???</label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <script src="style.js"></script>
+  </body>
+</html>

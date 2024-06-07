@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Home</title>
+  </head>
+  <body style="background-color: #1f1e2e">
+    <header id="head">
+      <div id="he1">
+        <img src="logo-no-background(1).png" alt="" style="height: 70%; width: 30%; margin-left: 2%;">
+        <hr style="margin: 0px 20px 0px 20px" color="black" />
+        <button class="buth1">Trang Chủ</button>
+        <button class="buth1">Trò Chơi</button>
+      </div>
+      <div id="he2">
+        <input
+          type="text"
+          style="
+            height: 40%;
+            width: 100%;
+            background-color: #1f1e2e;
+            border: #1f1e2e;
+            color: #c0c0c0;
+          "
+          placeholder="Tìm kiếm"
+        />
+      </div>
+      <div id="he3">
+        <hr style="margin: 0px 20px 0px 20px" color="black" />
+        <div id="monhe">
+          <label for="" class="mon1">Tổng tiền: </label>
+          <label for="" class="mon1"> 0 đồng</label>
+        </div>
+      </div>
+    </header>
+    <div id="bodi">
+      <div id="nav">
+        <button class="butnav">Miễn phí</button>
+        <button class="butnav">Steam</button>
+        <button class="butnav">Battle</button>
+        <button class="butnav">Origin</button>
+        <button class="butnav">Upload</button>
+        <button class="butnav">Epic</button>
+        <button class="butnav">Thích</button>
+        <button class="butnav">Kho</button>
+      </div>
+      <div id="main">
+        <label for="" style="color: white; font-size: 20px; margin-bottom: 30px"
+          >Danh sách game
+        </label>
+        <div id="gameslot">
+          <div class="game">
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/346110/header.jpg?t=1709879597"
+              class="pics"
+              alt=""
+              onclick="loadARK()"
+            />
+            <div class="name" onclick="loadARK()">ARK: Survival Evolved</div>
+          </div>
+          <div class="game">
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg?t=1710421488"
+              class="pics"
+              alt=""
+              onclick="loadBMW()"
+            />
+            <div class="name" onclick="loadBMW()">Black Myth: Wukong</div>
+          </div>
+          <div class="game">
+            <img
+              src="https://cdn.akamai.steamstatic.com/steam/apps/379720/header.jpg?t=1692892793"
+              class="pics"
+              alt=""
+              onclick="loadDoom()"
+            />
+            <div class="name" onclick="loadDoom()">Doom</div>
+          </div>
+          <div class="game">
+            <img
+              src="https://cdn.cloudflare.steamstatic.com/steam/apps/1593500/header.jpg?t=1695758729"
+              class="pics"
+              alt=""
+              onclick="loadGOW()"
+            />
+            <div class="name" onclick="loadGOW()">God Of War</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    </script>
+  </body>
+</html>

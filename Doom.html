@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doom</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body style="background-color: #1f1e2e">
+    <header id="head">
+      <div id="he1">
+        <img src="logo-no-background(1).png" alt="" style="height: 70%; width: 30%; margin-left: 2%;">
+        <hr style="margin: 0px 20px 0px 20px" color="black" />
+        <button class="buth1" onclick="back()">Trang Chủ</button>
+        <button class="buth1">Trò Chơi</button>
+      </div>
+      <div id="he2">
+        <input
+          type="text"
+          style="
+            height: 40%;
+            width: 100%;
+            background-color: #1f1e2e;
+            border: #1f1e2e;
+            color: #c0c0c0;
+          "
+          placeholder="Tìm kiếm"
+        />
+      </div>
+      <div id="he3">
+        <hr style="margin: 0px 20px 0px 20px" color="black" />
+        <div id="monhe">
+          <label for="" class="mon1">Tổng tiền: </label>
+          <label for="" class="mon1"> 0 đồng</label>
+        </div>
+      </div>
+    </header>
+    <div id="bodi">
+      <div id="feaback">
+        <button id="back" onclick="quaylai()">&#11164Quay lại</button>
+        <div id="fea">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/379720/header.jpg?t=1692892793" alt="" id="picsbig">
+            <div id="minifea">
+              <img 
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/379720/ss_f989e793786bf1d6459da1139a484203efef1447.600x338.jpg?t=1692892793" 
+                alt="" 
+                class="minipics" 
+                id="pics1"
+                onclick="pics1()">
+              <img 
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/379720/ss_ac05e086b8f0580bc95970fbb6f18a7e4fe65404.600x338.jpg?t=1692892793" 
+                alt="" 
+                class="minipics" 
+                id="pics2"
+                onclick="pics2()">
+              <img 
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/379720/ss_d7ee83faf64036494e4a817b8be55b044fbe7c6c.600x338.jpg?t=1692892793" 
+                alt="" 
+                class="minipics" 
+                id="pics3"
+                onclick="pics3()">
+              <img 
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/379720/ss_4c0b80e027b1095db40cd49bf889c39ca03ec02f.600x338.jpg?t=1692892793"
+                alt="" 
+                class="minipics" 
+                id="pics4"
+                onclick="pics4()">
+            </div>
+        </div>
+      </div>
+      <div id="infor">
+        <Label id="name">Doom</Label>
+        <div id="fir">
+          <div id="buttgh">📌</div>
+        </div>
+        <div id="plot">
+            <p>Bạn đến đây là có lý do. Cơ sở nghiên cứu khổng lồ của Tập đoàn Hàng không Vũ trụ Union trên Sao Hỏa bị choáng ngợp bởi những con quỷ hung dữ và mạnh mẽ, và chỉ có một người đứng giữa thế giới của họ và thế giới của chúng ta. Là DOOM Marine đơn độc, bạn được kích hoạt để làm một việc – tiêu diệt tất cả.</p>
+        </div>
+        <div id="standvstime">
+          <div id="time">
+            <Label style="color: #71bf17;">NGÀY RA MẮT</Label>
+            <label for="">12 Thg05, 2016</label>
+          </div>
+          <div id="stand">
+            <Label style="color: #7959df;">NHÀ PHÁT TRIỂN</Label>
+            <label for="">id Software</label>
+          </div>
+        </div>
+        <div id="modevsrate">
+          <div id="mode">
+            <Label>GIÁ TIỀN</Label>
+            <label for="">450.000₫</label>
+          </div>
+          <div id="rate">
+            <Label >ĐIỂM ĐÁNH GIÁ</Label>
+            <label for="" style="color: #f7c20d;">Cực kỳ tích cực</label>
+          </div>
+        </div>
+        <div id="warning">
+          <Label style="font-size:x-large; margin-right: 3%;">&#128681;</Label>
+          <div id="sense" style="color: #B91c4a">
+            Trò chơi này cần 📌GHIM để tiếp tục tiên trình chơi của bạn vào lần sau
+          </div>
+        </div>
+        <div id="buygame">
+          <label for="" style="color: #6fb928;">Click vào đây để</label>
+          <Label style="color: #6fb928;">MUA VÀ CHƠI NGAY</Label>
+        </div>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
