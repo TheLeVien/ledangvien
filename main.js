@@ -1,8 +1,10 @@
-localStorage.clear();
-let gameslot = document.getElementById("gameslot");
-const urllist = "https://free-to-play-games-database.p.rapidapi.com/api/games";
+const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
 const urlgame =
   "https://free-to-play-games-database.p.rapidapi.com/api/game?id=";
+
+getlist();
+localStorage.removeItem("id");
+let gameslot = document.getElementById("gameslot");
 
 async function getlist() {
   const options = {
@@ -13,10 +15,10 @@ async function getlist() {
     },
   };
   try {
-    const response = await fetch(urllist, options);
+    const response = await fetch(url, options);
     const result = await response.json();
     ///console.log(result);
-    for (let i = 0; i <= 20; i++) {
+    for (let i = 0; i <= 40; i++) {
       ///console.log(result[i].id);
 
       /// gameslot
@@ -49,8 +51,6 @@ function getgame() {
   localStorage.setItem("id", event.target.id);
   window.location = "game.html";
 }
-
-getlist();
 
 function loadGOW() {
   ///event.preventDefault();

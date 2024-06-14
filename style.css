@@ -19,7 +19,7 @@ label {
   margin-top: 30px;
   width: 300px;
   border: none;
-  border-bottom: solid blue;
+  border-bottom: solid #108c8c;
   height: 20px;
   background-color: #8c1010;
 }
@@ -39,7 +39,7 @@ button {
   width: 95%;
   justify-content: center;
   height: 25px;
-  background-color: #0900c9;
+  background-color: #108c8c;
   color: #e8c2d3;
   font-size: 15px;
   border-right: none;

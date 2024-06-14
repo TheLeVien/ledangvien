@@ -60,7 +60,6 @@ async function getgame() {
     const result = await response.json();
     console.log(result);
     document.getElementById("picsbig").src = result.thumbnail;
-
     document.getElementById("name").innerHTML = result.title;
     document.getElementById("tit").innerHTML = result.title;
     document.getElementById("des").innerHTML = result.description;
@@ -72,9 +71,11 @@ async function getgame() {
       console.log(document.getElementById("pics" + i).src);
     }
     ///console.log(document.getElementById("pics3").src);
-    if (document.getElementById("pics3").src == "") {
-      let element = document.getElementById("pics3");
-      element.remove();
+    for (let i = 0; i < 4; i++) {
+      if (document.getElementById("pics" + i).src == "") {
+        let element = document.getElementById("pics" + i);
+        element.remove();
+      }
     }
   } catch (error) {
     console.error(error);
