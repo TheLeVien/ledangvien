@@ -59,27 +59,47 @@ async function getgame() {
     const response = await fetch(urlgame + id, options);
     const result = await response.json();
     console.log(result);
-    document.getElementById("picsbig").src = result.thumbnail;
-    document.getElementById("name").innerHTML = result.title;
-    document.getElementById("tit").innerHTML = result.title;
-    document.getElementById("des").innerHTML = result.description;
-    document.getElementById("date").innerHTML = result.release_date;
-    document.getElementById("genre").innerHTML = result.genre;
-
-    for (let i in result.screenshots) {
-      document.getElementById("pics" + i).src = result.screenshots[i].image;
-      console.log(document.getElementById("pics" + i).src);
-    }
-    ///console.log(document.getElementById("pics3").src);
-    for (let i = 0; i < 4; i++) {
-      if (document.getElementById("pics" + i).src == "") {
-        let element = document.getElementById("pics" + i);
-        element.remove();
-      }
-    }
+    getinfor(result);
+    getpics(result);
+    getsystem(result);
   } catch (error) {
     console.error(error);
   }
+}
+
+function getinfor(result) {
+  document.getElementById("name").innerHTML = result.title;
+  document.getElementById("tit").innerHTML = result.title;
+  document.getElementById("des").innerHTML = result.description;
+  document.getElementById("date").innerHTML = result.release_date;
+  document.getElementById("genre").innerHTML = result.genre;
+}
+
+function getpics(result) {
+  document.getElementById("picsbig").src = result.thumbnail;
+  for (let i in result.screenshots) {
+    document.getElementById("pics" + i).src = result.screenshots[i].image;
+    console.log(document.getElementById("pics" + i).src);
+  }
+  for (let i = 0; i < 4; i++) {
+    if (document.getElementById("pics" + i).src == "") {
+      let element = document.getElementById("pics" + i);
+      element.remove();
+    }
+  }
+}
+
+function getsystem(result) {
+  document.getElementById("graphics").innerHTML =
+    result.minimum_system_requirements.graphics;
+  document.getElementById("memory").innerHTML =
+    result.minimum_system_requirements.memory;
+  document.getElementById("os").innerHTML =
+    result.minimum_system_requirements.os;
+  document.getElementById("processor").innerHTML =
+    result.minimum_system_requirements.processor;
+  document.getElementById("storage").innerHTML =
+    result.minimum_system_requirements.storage;
 }
 
 getgame();

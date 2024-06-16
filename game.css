@@ -77,7 +77,7 @@ body {
 #bodi {
   display: flex;
   flex-direction: row;
-  height: 87%;
+  height: fit-content;
   margin: 0px;
 }
 
@@ -107,12 +107,20 @@ body {
 #fea {
   height: fit-content;
   background-color: #272a3d;
+  margin-bottom: 3%;
+}
+
+#require {
+  height: fit-content;
+  background-color: #272a3d;
+  margin-bottom: 20px;
 }
 
 #picsbig {
   width: 99%;
   height: fit-content;
   margin: 1%;
+  border-bottom: solid #272a3d;
 }
 
 #minifea {
@@ -174,7 +182,9 @@ body {
 
 p {
   color: #e9e9ec;
-  width: 100%;
+  width: fit-content;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 #standvstime {
@@ -265,4 +275,10 @@ p {
   font-weight: bold;
   margin: 10% 0 2% 0;
   color: #ea8a49;
+}
+
+.system {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
 }
