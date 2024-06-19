@@ -1,11 +1,14 @@
-var user = [
-  { useremail: "user1@gmail.com", password: "pass1", ghim: [], name: "" },
-  { useremail: "use2@gmail.com", password: "pass2", ghim: [], name: "" },
+var userk = [
+  { username: "", useremail: "user1@gmail.com", password: "pass1", ghim: [] },
+  { username: "", useremail: "use2r@gmail.com", password: "pass2", ghim: [] },
 ];
+
+///đăng kí here
 
 function checkdangki() {
   event.preventDefault();
-  localStorage.setItem("user", JSON.stringify(user));
+  user = JSON.parse(localStorage.getItem("user"));
+  if (user == null) localStorage.setItem("user", JSON.stringify(userk));
   user = JSON.parse(localStorage.getItem("user"));
   console.log(user);
   let name = document.forms["register"]["name"].value;
@@ -20,22 +23,32 @@ function checkdangki() {
     alert("Register Error");
     return;
   }
-  //alert(name + pass + email);
   var existinguser = user.find(function (user) {
     return user.useremail === email;
   });
+
+  var existingname = user.find(function (user) {
+    return user.username === name;
+  });
+
+  if (existingname) {
+    document.forms["register"]["name"].value = "";
+    alert("Register Error(Name)");
+    return;
+  }
+
   if (existinguser) {
     document.forms["register"]["email"].value = "";
-    alert("Register Error");
+    alert("Register Error(Email)");
     return;
   }
   if (pass != repass) {
-    alert("Register Error");
+    alert("Register Error(Password)");
     document.forms["register"]["repass"].value = "";
     return;
   }
   if (!existinguser && repass === pass) {
-    user.push({ useremail: email, password: pass, ghim: [], name: name });
+    user.push({ useremail: email, password: pass, ghim: [], username: name });
     localStorage.setItem("user", JSON.stringify(user));
     document.forms["register"]["pass"].value = "";
     document.forms["register"]["repass"].value = "";
@@ -44,6 +57,8 @@ function checkdangki() {
     alert("Register success!!");
   }
 }
+
+///dang nhap here
 
 function checkdangnhap() {
   event.preventDefault();
