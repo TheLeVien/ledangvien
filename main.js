@@ -56,3 +56,7 @@ function loadGOW() {
   ///event.preventDefault();
   window.location = "game.html";
 }
+
+function profile() {
+  window.location.href = "profile.html";
+}

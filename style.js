@@ -47,13 +47,10 @@ function checkdangki() {
     document.forms["register"]["repass"].value = "";
     return;
   }
-  if (!existinguser && repass === pass) {
-    user.push({ useremail: email, password: pass, ghim: [], username: name });
+  if (!existinguser && repass === pass && !existingname) {
+    user.push({ username: name, useremail: email, password: pass, ghim: [] });
     localStorage.setItem("user", JSON.stringify(user));
-    document.forms["register"]["pass"].value = "";
-    document.forms["register"]["repass"].value = "";
-    document.forms["register"]["email"].value = "";
-    document.forms["register"]["name"].value = "";
+    window.location.href = "dangnhap.html";
     alert("Register success!!");
   }
 }
@@ -70,6 +67,7 @@ function checkdangnhap() {
     return user.useremail === email && user.password === pass;
   });
   if (founduser) {
+    localStorage.setItem("useremail", email);
     document.forms["login"]["pass"].value = "";
     document.forms["login"]["email"].value = "";
     window.location.href = "main.html";

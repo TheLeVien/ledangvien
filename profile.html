@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Home</title>
+    <link rel="stylesheet" href="profile.css" />
+    <title>Profile</title>
   </head>
-  <body style="background-color: #1f1e2e; height: fit-content;">
+  <body style="background-color: #1f1e2e; height: fit-content">
     <header id="head">
       <div id="he1">
-        <img src="logo-no-background(1).png" alt="" style="height: 70%; width: 30%; margin-left: 2%;">
+        <img
+          src="logo-no-background(1).png"
+          alt=""
+          style="height: 70%; width: 30%; margin-left: 2%"
+        />
         <hr style="margin: 0px 20px 0px 20px" color="black" />
-        <button class="buth1">Trang Chủ</button>
+        <button class="buth1" onclick="main()">Trang Chủ</button>
         <button class="buth1">Trò Chơi</button>
-        <button class="buth1" id="profile" onclick="profile()">Cá Nhân</button>
+        <button class="buth1">Cá Nhân</button>
       </div>
       <div id="he2">
         <input
@@ -48,15 +52,36 @@
         <button class="butnav">Kho</button>
       </div>
       <div id="main">
+        <div id="profile">
+          <div class="infor">
+            <label for="">Name: </label> <label for="" id="name">1</label>
+          </div>
+          <div class="infor">
+            <label for="">Email: </label> <label for="" id="email">1</label>
+          </div>
+          <button id="logout" onclick="logout()" style="color: #e3242b">
+            Log Out <i class="fas fa-sign-out-alt" style="color: #e3242b"></i>
+          </button>
+        </div>
         <div id="gameslot">
-          <label for="" style="color: white; font-size: 150%; display: inline; width: 100%; margin-bottom: 2%;"
-          >Danh sách game
-        </label>
-          
+          <label
+            for=""
+            style="
+              color: white;
+              font-size: 150%;
+              display: inline;
+              width: 100%;
+              margin-bottom: 2%;
+            "
+            >Danh sách game đã lưu
+          </label>
         </div>
       </div>
     </div>
-    <script src="main.js"></script>
-    </script>
+    <script
+      src="https://kit.fontawesome.com/491eb0d0f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="profile.js"></script>
   </body>
 </html>
