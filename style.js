@@ -1,6 +1,18 @@
 var userk = [
-  { username: "", useremail: "user1@gmail.com", password: "pass1", ghim: [] },
-  { username: "", useremail: "use2r@gmail.com", password: "pass2", ghim: [] },
+  {
+    username: "",
+    useremail: "user1@gmail.com",
+    password: "pass1",
+    ghim: [],
+    play: [],
+  },
+  {
+    username: "",
+    useremail: "use2r@gmail.com",
+    password: "pass2",
+    ghim: [],
+    play: [],
+  },
 ];
 
 ///đăng kí here
@@ -48,7 +60,13 @@ function checkdangki() {
     return;
   }
   if (!existinguser && repass === pass && !existingname) {
-    user.push({ username: name, useremail: email, password: pass, ghim: [] });
+    user.push({
+      username: name,
+      useremail: email,
+      password: pass,
+      ghim: [],
+      play: [],
+    });
     localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "dangnhap.html";
     alert("Register success!!");

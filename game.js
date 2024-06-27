@@ -89,6 +89,24 @@ function getpics(result) {
   }
 }
 
+/// Thêm game
+
+function addgame() {
+  var email = localStorage.getItem("useremail");
+  var user = JSON.parse(localStorage.getItem("user"));
+  for (var i in user) {
+    if (email === user[i].useremail) {
+      var pass = user[i].password;
+      var name = user[i].username;
+      var ghim = user[i].ghim;
+      var play = user[i].play;
+      ///console.log(user[i]);
+      user.splice(i, 1);
+      console.log(user);
+    }
+  }
+}
+
 function getsystem(result) {
   document.getElementById("graphics").innerHTML =
     result.minimum_system_requirements.graphics;
