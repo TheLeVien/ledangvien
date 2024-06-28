@@ -96,13 +96,31 @@ function addgame() {
   var user = JSON.parse(localStorage.getItem("user"));
   for (var i in user) {
     if (email === user[i].useremail) {
+      var id = localStorage.getItem("id");
       var pass = user[i].password;
       var name = user[i].username;
       var ghim = user[i].ghim;
       var play = user[i].play;
       ///console.log(user[i]);
       user.splice(i, 1);
+      for (let i in play) {
+        if (play[i] == id) {
+          console.log("This game was added before!");
+          return 0;
+        }
+      }
+      play.push(id);
+      console.log(play);
+      console.log("Adding sucess!!");
+      user.push({
+        useremail: email,
+        username: name,
+        password: pass,
+        ghim: ghim,
+        play: play,
+      });
       console.log(user);
+      localStorage.setItem("user", JSON.stringify(user));
     }
   }
 }
